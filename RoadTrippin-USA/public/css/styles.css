@@ -1,0 +1,413 @@
+/*****************************************
+RESET
+******************************************/
+html {
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+/****************************************************************
+WELCOME PAGE
+*****************************************************************/
+.welcome-body {
+	background: url("/images/route66.jpg") no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/**********
+/ Header & Navigation Bar
+**********/
+.welcome-body header {
+	background-color: #222;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.welcome-nav-logo {
+	color: #FDDB3B;
+	font-family: Codystar;
+	font-size: 2em;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+
+.welcome-nav-signup {
+	color: #E4E4E4;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	padding: 10px;
+}
+
+/**********
+/ Featured Background Section
+**********/
+.welcome-body > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 80px);
+	margin-top: 80px;
+}
+
+.welcome-background {
+	/* How to center the .welcome-background */
+/*	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 70%;
+	height: 70%;
+	margin: auto;
+	padding-top: 20px;*/
+
+	background: linear-gradient(#222, transparent 70%),
+	            linear-gradient(0deg, #222, transparent 70%),
+				url("route66.jpg") no-repeat center;
+	background-size: cover;
+	width: 70%;
+	height: 70%;
+	padding-top: 20px;
+	box-shadow: 1px 1px 500px 20px #222;
+	text-align: center;
+}
+
+.title {
+	color: #e4e4e4;
+	font-size: 1.5em;
+	border-bottom: 2px solid;
+	padding-bottom: 10px;
+}
+
+.welcome-background-logo, h1 {
+	color: #FDDB3B;
+	text-transform: uppercase;
+	line-height: 1.3;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, .8);
+	margin: 12px 0 15px;
+}
+
+.welcome-background-logo {
+	font-family: Codystar;
+}
+
+h1 {
+	font-family: "Permanent Marker";
+	font-size: 3.625em;
+}
+
+/**********
+/ Login Section
+**********/
+.lightbox {
+	background-color: rgba(20, 20, 20, .3);
+	color: #EEE;
+	width: 200px;
+	margin: auto;
+	display: inline-block;
+	padding: 10px 0;
+}
+
+.login {
+	padding: 5px;
+}
+
+.lightbox-login {
+	background-color: rgba(20, 20, 20, .5);
+	color: #e4e4e4;
+	text-decoration: none;
+	width: 115px;
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 30px;
+}
+
+
+/****************************************************************
+HOME PAGE
+*****************************************************************/
+.home-background {
+	background-image: url('/images/route66.jpg');
+	overflow: hidden;
+	background-size: cover;
+}
+
+.home-background > div {
+	background-color: #EEE;
+	margin: auto;
+	width: 960px;
+	min-height: 650px;
+	text-align: center;
+}
+
+.home-container {
+	background-color: #EEE;
+	width: 325px;
+	margin: 225px 50px 0;
+	display: inline-block;
+}
+
+.home-media {
+	background-color: blue;
+	display: block;
+	height: 200px;
+	width: 325px;
+}
+
+.home-description {
+	background-color: lightblue;
+}
+
+.home-description > span {
+	display: block;
+	background-color: pink;
+	color: red;
+}
+
+
+/****************************************************************
+ROUTE PAGE
+*****************************************************************/
+.route-background {
+	background-image: url('/images/route66.jpg');
+	overflow: hidden;
+	background-size: cover;
+}
+
+.route-background > div {
+	margin: 0 auto;
+	width: 960px;
+	min-height: 500px;
+	text-align: center;
+}
+
+#map {
+      height: calc(70vh - 80px);
+	  width: calc(70vw - 20px);
+	  margin: 100px 20px 0;
+      /*display: flex;
+	  align-items: center;
+	  justify-content: center;*/
+      /*position: absolute;*/
+      /*top: 130px;*/
+      /*left: 50%;
+      transform: translateX(-50%);*/
+      /*margin-left: 50px;*/
+    }
+
+.route-new-trip {
+	background-color: #222;
+	color: #FDDB3B;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+
+/****************************************************************
+VIEW ALL PAGE SECONDARY-BACKGROUND
+*****************************************************************/
+.view-background {
+	background-image: url('/images/route66.jpg');
+	overflow: hidden;
+	background-size: cover;
+	/*display: flex;
+	justify-content: center;
+	align-items: center;*/
+}
+
+.view-background > div {
+	background-color: yellow;
+	margin: auto;
+	width: 960px;
+	min-height: 650px;
+	text-align: center;
+}
+
+/*.view-secondary-background {
+	background-color: #FFF;
+	min-height: 500px;
+	padding: 80px 80px;
+}
+
+.view-secondary-background > * + * {
+	margin-top: 40px;
+}*/
+
+.view-container {
+	background-color: #EEE;
+	overflow: hidden;
+	display: inline-block;
+	border-top: 2px solid #222;
+	margin: 120px 0 40px;
+	padding: 20px;
+}
+
+.view-media {
+	background-color: blue;
+	height: 175px;
+	width: 200px;
+	float: left;
+}
+
+.view-description {
+	background-color: lightblue;
+	min-height: 175px;
+	margin-left: 200px;
+	text-align: left;
+	padding: 10px 20px;
+	/*margin-right: 400px;*/
+}
+
+.view-location {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.view-date {
+	font-style: italic;
+}
+
+.view-description > p {
+	background-color: pink;
+	color: red;
+}
+
+
+/****************************************************************
+HEADER SECTION
+*****************************************************************/
+.header {
+	background-color: #222;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	/*text-align: center;*/
+}
+
+.nav-logo {
+	color: #FDDB3B;
+	font-family: Codystar;
+	text-decoration: none;
+	font-size: 2em;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+
+.nav-route, .nav-trips {
+	color: #FDDB3B;
+	text-decoration: none;
+	position: absolute;
+	top: 30px;
+}
+
+.nav-route {
+	left: 43%;
+}
+
+.nav-trips {
+	right: 43%;
+}
+
+.user-profile {
+	background-color: #222;
+	position: absolute;
+	top: 10px;
+	right: 25px
+}
+
+.user-profile img {
+	background-color: blue;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	/*outline: none;*/
+}
+
+.user-profile div {
+	background-color: #EEE;
+	display: none;
+	position: absolute;
+	top: 60px;
+	right: 0;
+}
+
+.user-profile:hover div {
+	display: block;
+}
+
+.user-profile div a {
+	color: #222;
+	display: block;
+	width: 150px;
+	padding: 15px;
+}
+
+
+/****************************************************************
+FOOTER SECTION
+*****************************************************************/
+.footer {
+	background-color: #222;
+	color: brown;
+	padding: 20px;
+	text-align: right;
+}
+
+footer span {
+	color: blue;
+	font-family: "Permanent Marker";
+}
+
+.social-media {
+	font-size: 1.8em;
+}
+
+.fa:hover {
+	color: #FDDB3B;
+}
+
+.fa-twitter-square {
+	color: #5EA9DD;
+}
+
+.fa-facebook-official {
+	color: #3B5998;
+}
+
+.fa-instagram {
+	color: #4C7A9F;
+}
+
+.fa-tumblr-square {
+	color: #56BC8A;
+}
+
+/*.extra {
+	background-color: transparent;
+	min-height: 600px;
+}*/
+
+
+
+
+
+
