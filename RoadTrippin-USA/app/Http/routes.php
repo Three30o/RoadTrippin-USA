@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -29,4 +30,17 @@ Route::controllers([
 // Route::get('auth/login', 'UserController@login');
 // Route::get('auth/logout', 'UserController@logout');
 Route::get('user', 'UserController@view');
-Route::get('user/delete', 'UserController@delete');
+Route::get('user/delete', 'UserController@logout');
+
+/****************************************************************
+    Trip Routes
+*****************************************************************/
+
+Route::get('view_all_trips', 'TripController@allTrips');
+Route::get('route', 'TripController@createTrip');
+Route::get('trip/{trip_id}/gallery', 'TripController@viewGallery');
+Route::post('trip/{trip_id}/gallery', 'TripImageController@addImage');
+
+// Route::post('route', 'TripController@postCreateTrip');
+
+// Route::get('view', 'TripController@');

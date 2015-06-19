@@ -17,44 +17,46 @@ create table user (
 
 INSERT INTO user (first_name, last_name, username, email, password, user_img)
 	values
-	("Scott", "Brau", "Three30O", "scottbrau30@gmail.com", "password", "images/pacific_city.jpg");
+	("Scott", "Brau", "Three30O", "scottbrau30@gmail.com", "$2y$10$8CQc2GkUEp2wa/xQ7p8WNeuYkj7PhddA3NDG6J4HLpY.8McjABHu.", "images/scott.jpg");
 
 
 create table trip (
 	trip_id int auto_increment primary key,
 	user_id int,
-	name varchar(255)
+	name varchar(255),
+	`date` date,
+	description varchar(255),
+	origin_city varchar(255),
+	origin_state varchar(255),
+	destination_city varchar(255),
+	destination_state varchar(255),
+	created_at datetime,
+    updated_at datetime	
 );
 
-INSERT INTO trip (user_id, name)
+INSERT INTO trip (user_id, name, `date`, description, origin_city, origin_state, destination_city, destination_state)
 	values 
-	(1, "Omaha, NE to Portland, OR"),
-	(1, "Jacksonville, NC to Omaha, NE");
+	(1, "Moved from Omaha to Portland", "2014-07-29", "My move to Oregon began on a Wednesday ...", "Omaha", "NE", "Portland", "OR");
+	-- (1, "Pick Up My New Car", "2014-01-25", "Travelling with my friend Seth ..." "Jacksonville", "NC", "Omaha", "NE");
 
-
-create table waypoint (
-	waypoint_id int auto_increment primary key,
-	trip_id int,
-	`order` int,
-	lattitude float,
-	longitude float
-);
-
-INSERT INTO waypoint (trip_id, `order`, lattitude, longitude)
-	values
-	(1, 1, 74.27976683, -96.8979772);
 
 create table trip_image (
 	trip_image_id int auto_increment primary key,
-	waypoint_id int (11),
+	trip_id int,
 	img_path varchar (255),
-	title varchar (255),
-	date datetime,
+	description varchar (255),
+	`date` datetime,
 	lattitude float,
-	longitude float
+	longitude float,
+	created_at datetime,
+    updated_at datetime	
 );
 
-INSERT INTO trip_image (waypoint_id, img_path, title, date, lattitude, longitude)
+INSERT INTO trip_image (trip_id, img_path, description, `date`, lattitude, longitude)
 	values
-	(1, "image/path", "Riding donkeys in Delaware", "2015-06-02", 74.27976683, -96.8979772);
-
+	(1, "pic1.jpg", "Riding donkeys in Delaware", "2015-06-02", 74.27976683, -96.8979772),
+	(1, "pic2.jpg", "Riding monkeys in Delaware", "2015-06-02", 74.27976683, -96.8979772),
+	(1, "pic3.jpg", "Riding elephants in Delaware", "2015-06-02", 74.27976683, -96.8979772),
+	(1, "pic4.jpg", "Riding cats in Delaware", "2015-06-02", 74.27976683, -96.8979772),
+	(1, "pic5.jpg", "Riding brown bears in Delaware", "2015-06-02", 74.27976683, -96.8979772),
+	(1, "pic6.jpg", "Riding squirrels in Delaware", "2015-06-02", 74.27976683, -96.8979772);

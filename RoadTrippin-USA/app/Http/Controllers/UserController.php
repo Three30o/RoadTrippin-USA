@@ -1,7 +1,8 @@
 <?php 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+// use Illuminate\HTTP\Request;
+use App\User;
 
 use Auth;
 
@@ -23,7 +24,7 @@ class UserController extends Controller {
     **********************************************/
 
     public function postCreate() {
-        return redirect('home') ;    
+        return redirect('home');    
     }
 
     /**********************************************
@@ -74,13 +75,13 @@ class UserController extends Controller {
         Shows the User Profile page
     **********************************************/
 
-    public function view() {
-        if (!Auth::check()) {
-            return redirect('welcome');
-        } 
-        $user = Auth::user();
-        return view('user', ['user' => $user]);
+    // public function view() {
+    //     if (!Auth::check()) {
+    //         return redirect('welcome');
+    //     } 
+    //     $user = Auth::user();
+    //     return view('user', ['user' => $user]);
         
-    }
+    // }
 
 }

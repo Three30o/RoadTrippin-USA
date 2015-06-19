@@ -31,4 +31,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+	public function trip() {
+		return $this->hasMany("App\Models\Trip", 'user_id');
+	}
+
 }

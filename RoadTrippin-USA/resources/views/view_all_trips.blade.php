@@ -1,20 +1,19 @@
 @extends("layout")
 
 @section("content")
-
 	<div class="view-background">
   		<div>
+			@foreach($trips as $trip)
   			<div class="view-container">
 	  			<div class="view-media"></div>
 	  			<div class="view-description">
-	  				<div><a class="view-location" href="view_trip">Portland, OR - Phoenix, AZ</a></div>
-	  				<div class="view-date">March 18th, 2015 - April 2nd, 2015</div>
-	  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-	  					Cumque odit asperiores, distinctio, magni quis doloribus molestiae. 
-	  				</p>
+	  				<div><a class="view-location" href="/trip/{{$trip->trip_id}}/gallery">{{ $trip->name }}</a></div>
+	  				<div class="view-date">{{ $trip->date }}</div>
+	  				<p>{{ $trip->description }}</p>
 	  			</div>
 	  		</div>
-	  		<div class="view-container">
+			@endforeach
+	  		{{-- <div class="view-container">
 	  			<div class="view-media"></div>
 	  			<div class="view-description">
 	  				<div><a class="view-location" href="view_trip">Omaha, NE - Portland, OR</a></div>
@@ -23,7 +22,7 @@
 	  					Cumque odit asperiores, distinctio, magni quis doloribus molestiae. 
 	  				</p>
 	  			</div>
-	  		</div>	
+	  		</div>	 --}}
 	  		<div class="view-container">
 	  			<div class="view-media"></div>
 	  			<div class="view-description">
@@ -36,5 +35,4 @@
 	  		</div>
   		</div>
   	</div>
-	
 @endsection

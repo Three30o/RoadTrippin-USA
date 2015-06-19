@@ -188,73 +188,62 @@ ROUTE PAGE
 }
 
 .route-background > div {
+	background-color: #EEE;
 	margin: 0 auto;
 	width: 960px;
-	min-height: 500px;
+	min-height: 50px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #map {
-      height: calc(70vh - 80px);
+      height: calc(70vh - 20px);
 	  width: calc(70vw - 20px);
-	  margin: 100px 20px 0;
-      /*display: flex;
-	  align-items: center;
-	  justify-content: center;*/
-      /*position: absolute;*/
-      /*top: 130px;*/
-      /*left: 50%;
-      transform: translateX(-50%);*/
-      /*margin-left: 50px;*/
+	  margin: 120px 30px 0;
     }
 
 .route-new-trip {
 	background-color: #222;
 	color: #FDDB3B;
 	text-decoration: none;
-	display: inline-block;
 	padding: 10px;
 	border-radius: 3px;
+	margin: 40px;
+	width: 100px;
+	flex: 1;
 }
 
 
 /****************************************************************
-VIEW ALL PAGE SECONDARY-BACKGROUND
+VIEW ALL PAGE 
 *****************************************************************/
 .view-background {
 	background-image: url('/images/route66.jpg');
 	overflow: hidden;
 	background-size: cover;
-	/*display: flex;
-	justify-content: center;
-	align-items: center;*/
 }
 
 .view-background > div {
-	background-color: yellow;
+	background-color: #EEE;
 	margin: auto;
 	width: 960px;
-	min-height: 650px;
-	text-align: center;
 }
-
-/*.view-secondary-background {
-	background-color: #FFF;
-	min-height: 500px;
-	padding: 80px 80px;
-}
-
-.view-secondary-background > * + * {
-	margin-top: 40px;
-}*/
 
 .view-container {
-	background-color: #EEE;
+	background-color: #DDD;
 	overflow: hidden;
 	display: inline-block;
-	border-top: 2px solid #222;
-	margin: 120px 0 40px;
-	padding: 20px;
+	width: 100%;
+
+	margin: 40px 0 40px;
+	padding: 20px 40px;
+}
+
+.view-container:first-of-type {
+	margin: 120px 0 0 0;
 }
 
 .view-media {
@@ -265,12 +254,11 @@ VIEW ALL PAGE SECONDARY-BACKGROUND
 }
 
 .view-description {
-	background-color: lightblue;
+	background-color: #EEE;
 	min-height: 175px;
 	margin-left: 200px;
 	text-align: left;
 	padding: 10px 20px;
-	/*margin-right: 400px;*/
 }
 
 .view-location {
@@ -283,8 +271,58 @@ VIEW ALL PAGE SECONDARY-BACKGROUND
 }
 
 .view-description > p {
-	background-color: pink;
-	color: red;
+	background-color: #EEE;
+	color: #222;
+}
+
+
+/****************************************************************
+Image Gallery
+*****************************************************************/
+.wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 80px;
+}
+
+.wrapper:first-of-type {
+	background-color: #EEE;
+	margin: 60px 0 -16px;
+	padding: 40px 0 0;
+}
+
+.wrapper:last-of-type {
+	padding-bottom: 40px;
+}
+
+.trip-container {
+	background-color: #EEE;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+
+.trip-media {
+	background-color: #DDD;
+	height: 150px;
+	width: 200px;
+	/*text-align: right;*/
+	position: relative;
+}
+
+.fa-pencil-square-o {
+	color: #EEE;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.trip-media p {
+	color: yellow;
+
 }
 
 
@@ -299,7 +337,6 @@ HEADER SECTION
 	right: 0;
 	left: 0;
 	z-index: 10;
-	/*text-align: center;*/
 }
 
 .nav-logo {
@@ -339,7 +376,6 @@ HEADER SECTION
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	/*outline: none;*/
 }
 
 .user-profile div {
