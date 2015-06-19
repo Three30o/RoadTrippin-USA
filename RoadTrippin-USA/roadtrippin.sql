@@ -44,19 +44,20 @@ create table trip_image (
 	trip_image_id int auto_increment primary key,
 	trip_id int,
 	img_path varchar (255),
-	description varchar (255),
-	`date` datetime,
 	lattitude float,
 	longitude float,
+	`date` datetime,
+	description varchar (255),
 	created_at datetime,
     updated_at datetime	
 );
 
-INSERT INTO trip_image (trip_id, img_path, description, `date`, lattitude, longitude)
+INSERT INTO trip_image (trip_id, img_path, lattitude, longitude, `date`, description)
 	values
-	(1, "pic1.jpg", "Riding donkeys in Delaware", "2015-06-02", 74.27976683, -96.8979772),
-	(1, "pic2.jpg", "Riding monkeys in Delaware", "2015-06-02", 74.27976683, -96.8979772),
-	(1, "pic3.jpg", "Riding elephants in Delaware", "2015-06-02", 74.27976683, -96.8979772),
-	(1, "pic4.jpg", "Riding cats in Delaware", "2015-06-02", 74.27976683, -96.8979772),
-	(1, "pic5.jpg", "Riding brown bears in Delaware", "2015-06-02", 74.27976683, -96.8979772),
-	(1, "pic6.jpg", "Riding squirrels in Delaware", "2015-06-02", 74.27976683, -96.8979772);
+	(1, "pic1.jpg", 74.27976683, -96.8979772, "2015-06-02", "Riding donkeys in Arizona"),
+	(1, "pic2.jpg", 74.27976683, -96.8979772, "2015-06-02", "Riding monkeys in Arizona"),
+	(1, "pic3.jpg", 74.27976683, -96.8979772, "2015-06-02", "Riding hippos in Arizona"),
+	(1, "pic4.jpg", 74.27976683, -96.8979772, "2015-06-02", "Riding squirrels in Arizona"),
+	(1, "pic5.jpg", 74.27976683, -96.8979772, "2015-06-02", "Riding cats in Arizona"),
+	(1, "pic6.jpg", 74.27976683, -96.8979772, "2015-06-02", "Riding scorpions in Arizona");
+	

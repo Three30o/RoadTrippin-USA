@@ -9,7 +9,7 @@ class TripImage extends Model {
 
 	protected $table = 'trip_image';
 
-	protected $fillable = ['trip_id', 'img_path', 'description', 'date', 'lattitude', 'longitude'];
+	protected $fillable = ['trip_id', 'img_path', 'lattitude', 'longitude', 'date', 'description'];
 
 	public function trip() {
 		return $this->belongsTo("App\Trip", 'trip_id');

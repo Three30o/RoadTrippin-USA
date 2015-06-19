@@ -5,7 +5,7 @@
 	<div class="view-background">
   		<div>
   			<form action="upload" method="POST" enctype="multipart/form-data">
-  			<input type="hidden" name="_token" value="{{ csrf_token() }}"> 
+  				<input type="hidden" name="_token" value="{{ csrf_token() }}"> 
 	  			<div class="wrapper">
 		  			<div class="trip-container">
 		        		<div class="trip-media trip-media1">
@@ -21,7 +21,20 @@
 		        		<div class="trip-media trip-media2">
 		        			<i class="fa fa-pencil-square-o" title="Edit"></i>
 		        			<img src="/uploads/{{ $image['img_path'] }}" alt="" width="100%" height="100%">
-		        		</div>	
+		        		</div>
+		        			<form action="edit" method="POST" name="trip-edit">	
+			        	<div class="trip-hidden-edit">
+  								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+  								<label>Lattitude: </label><br>
+  								<input type="text" name="lattitude"><br>
+  								<label>Longitude: </label><br>
+  								<input type="text" name="longitude"><br>
+  								<label>Date: </label><br>
+  								<input type="text" name="date"><br>
+  								<label>Description: </label><br>
+  								<input type="text-area" name="description"><br>
+			        	</div>
+			        		</form>	
 		  			</div>
 		  			@endforeach
 		  			<div class="trip-container">
