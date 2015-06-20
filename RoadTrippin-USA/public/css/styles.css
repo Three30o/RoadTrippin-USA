@@ -330,7 +330,6 @@ Image Gallery
 
 .trip-media p {
 	color: yellow;
-
 }
 
 .trip-edit {
@@ -356,16 +355,16 @@ Image Gallery
 	right: 10px;
 }
 
-.trip-hidden-edit form {
+.trip-edit form {
 	min-height: 350px;
 	min-width: 300px;
 }
 
-.trip-hidden-edit input {
-	margin: 10px 0;
+.trip-edit input {
+	color: #222;
 }
 
-.trip-hidden-edit input:first-of-type {
+.trip-edit input:first-of-type {
 	margin: 10px 0;
 }
 

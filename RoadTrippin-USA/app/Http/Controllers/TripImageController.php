@@ -58,9 +58,8 @@ class TripImageController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
-	{
-		//
+	public function edit($id) {
+		return view();
 	}
 
 	/**

@@ -20,7 +20,7 @@ class TripController extends Controller {
 	public function allTrips() {
 		
 		$trips = Trip::all();
-		return view('view_all_trips', ['trips' => $trips]);
+		return view('all_trips', ['trips' => $trips]);
 
 	}
 

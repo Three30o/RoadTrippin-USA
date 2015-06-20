@@ -21,7 +21,7 @@
 	      <nav>
 	        <div><a class="nav-logo" href="#">RoadTrippin'</a></div>
 	        <a class="nav-route" href="/route">Plan Route</a>
-	        <a class="nav-trips" href="/view_all_trips">My Trips</a>
+	        <a class="nav-trips" href="/all_trips">My Trips</a>
 	        <div class="user-profile">
 		        <img src="/images/scott.jpg" alt="">
 		        <div>
