@@ -12,6 +12,7 @@
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="/javascript/gmaps.js"></script>
 	<script src="/javascript/main.js"></script>
+	<script>var _token = '{{ csrf_token() }}'</script>
 </head>
 <body>
 
@@ -19,8 +20,8 @@
 	    <header>
 	      <nav>
 	        <div><a class="nav-logo" href="#">RoadTrippin'</a></div>
-	        <a class="nav-route" href="#">Plan Route</a>
-	        <a class="nav-trips" href="#">My Trips</a>
+	        <a class="nav-route" href="/route">Plan Route</a>
+	        <a class="nav-trips" href="/view_all_trips">My Trips</a>
 	        <div class="user-profile">
 		        <img src="/images/scott.jpg" alt="">
 		        <div>

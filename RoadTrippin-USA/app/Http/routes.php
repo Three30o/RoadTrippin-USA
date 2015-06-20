@@ -39,8 +39,17 @@ Route::get('user/delete', 'UserController@logout');
 Route::get('view_all_trips', 'TripController@allTrips');
 Route::get('route', 'TripController@createTrip');
 Route::get('trip/{trip_id}/gallery', 'TripController@viewGallery');
-Route::post('trip/{trip_id}/gallery', 'TripImageController@addImage');
 
 // Route::post('route', 'TripController@postCreateTrip');
 
 // Route::get('view', 'TripController@');
+
+/****************************************************************
+    Trip_image Routes
+*****************************************************************/
+
+Route::post('trip/{trip_id}/gallery', 'TripImageController@addImage');
+Route::post('trip/{trip_image_id}/delete', 'TripImageController@delete');
+
+Route::post('trip/{trip_id}/addImage', 'TripImageController@addImage');
+Route::post('trip/{trip_id}/postEdit', 'TripImageController@')

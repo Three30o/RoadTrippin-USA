@@ -98,7 +98,7 @@ class TripController extends Controller {
 		//Fetch data with Model
 		$images = TripImage::where('trip_id', '=', $trip_id)->get();
 
-		print_r($images[0]["img_path"]);
+		// print_r($images[0]["img_path"]);
 
 		return view('view_trip', ['images' => $images]);
 

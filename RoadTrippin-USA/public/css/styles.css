@@ -313,10 +313,18 @@ Image Gallery
 	position: relative;
 }
 
-.fa-pencil-square-o {
+.fa-pencil-square-o, .fa-trash {
 	color: #EEE;
 	position: absolute;
+}
+
+.fa-pencil-square-o {
 	top: 0;
+	right: 0;
+}
+
+.fa-trash {
+	bottom: 0;
 	right: 0;
 }
 
@@ -325,10 +333,50 @@ Image Gallery
 
 }
 
-.trip-hidden-edit {
-	display: hidden;
+.trip-edit {
+	background-color: rgba(0, 0, 0, .7);
+	color: #FDDB3B;
+	display: none;
+	padding: 10px;
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
 }
 
+.trip-edit.show {
+	display: block;
+}
+
+.fa-times {
+	color: #EEE;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.trip-hidden-edit form {
+	min-height: 350px;
+	min-width: 300px;
+}
+
+.trip-hidden-edit input {
+	margin: 10px 0;
+}
+
+.trip-hidden-edit input:first-of-type {
+	margin: 10px 0;
+}
+
+.edit-image-button {
+	background-color: rgba(20, 20, 20, .5);
+	width: 115px;
+	border-radius: 30px;
+	padding: 15px;
+	margin: 10px 0;
+	text-align: center;
+}
 
 /****************************************************************
 HEADER SECTION

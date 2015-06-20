@@ -2,6 +2,10 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
+use App\Trip;
+use App\TripImage;
+
 
 use Illuminate\Http\Request;
 
@@ -76,55 +80,59 @@ class TripImageController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
-		//
+	public function delete($id) {
+		$tripImage = TripImage::find($id);
+		$tripImage->delete();
+		return ['success' => true];
 	}
 
-	public function addImage() {
+	public function addImage($trip_id) {
 
 		////
 		// Check if image file is a actual image or fake image
-	    $target_dir = "/uploads";
-	    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	    $target_dir = "../public/uploads";
+	    $target_file = $target_dir .'/'. basename($_FILES["fileToUpload"]["name"]);
 
 	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 
-	    print_r($check);
-
 	    if($check !== false) {
-	        echo "File is an image - " . $check["mime"] . ".";
+	        //echo "File is an image - " . $check["mime"] . ".";
 
 	        // Save filename to db
 	        // basename($_FILES["fileToUpload"]["name"])
 
 	        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-	            echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	            // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 	        } else {
-	            echo "Sorry, there was an error uploading your file.";
+	            // echo "Sorry, there was an error uploading your file.";
 	        }
 
-	        // add trip_image record to db
-	        $trip_img->img_path = Request::input('img_path');
-	        $trip_img->description = Request::input('description');
-	        $trip_img->date = Request::input('date');
-	        $trip_img->lattitude = Request::input('lattitude');
-	        $trip_img->longitude = Request::input('date');
+	        // // add trip_image record to db
+	        $trip_img = new TripImage();
+	        $trip_img->img_path = basename($_FILES["fileToUpload"]["name"]);
+	        $trip_img->trip_id = $trip_id;
+	        // $trip_img->description = Request::input('description');
+	        // $trip_img->date = Request::input('date');
+	        // $trip_img->lattitude = Request::input('lattitude');
+	        // $trip_img->longitude = Request::input('date');
 	        $trip_img->save();
-	        return redirect('view_trip');
+	        
+	        // die($trip_id);
+
+	        //return redirect('view_trip');
 
 
 	        $uploadOk = 1;
 	   	} else {
-	        echo "File is not an image.";
+	        // echo "File is not an image.";
 	        $uploadOk = 0;
 	    }
 
-		$images = TripImage::where('trip_id', '=', 1)->get();
-		return view('view_trip', ['images' => $images]);
-
+		// $images = TripImage::where('trip_id', '=', 1)->get();
+		// return view('view_trip', ['images' => $images]);
+		return redirect('trip/' . $trip_id . '/gallery');
 	}
 
-}
+
 
 }
