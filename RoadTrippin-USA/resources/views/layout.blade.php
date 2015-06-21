@@ -34,12 +34,12 @@
 		        <div class="user-profile">
 			        <img src="/images/scott.jpg" alt="">
 			        <div>
-			          	<a href="#">Account</a>
+			          	<a href="/user">Account</a>
 			          	<a href="/auth/logout">Logout</a>
 			        </div>
 		      	</div>
 		      	@endif
-		      	
+
 	      	</nav>		
 	    </header>
     </div>

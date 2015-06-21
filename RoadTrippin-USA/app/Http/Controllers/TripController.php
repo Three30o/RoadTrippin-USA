@@ -17,7 +17,7 @@ class TripController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function allTrips() {
+	public function viewTrips() {
 		
 		$trips = Trip::all();
 		return view('all_trips', ['trips' => $trips]);
@@ -88,7 +88,7 @@ class TripController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function delete($id)
 	{
 		//
 	}

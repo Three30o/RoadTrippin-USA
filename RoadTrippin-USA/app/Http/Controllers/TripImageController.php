@@ -11,6 +11,43 @@ use Illuminate\Http\Request;
 
 class TripImageController extends Controller {
 
+	public function addImage($trip_id) {
+
+		// Check if image file is a actual image or fake image
+	    $target_dir = "../public/uploads";
+	    $target_file = $target_dir .'/'. basename($_FILES["fileToUpload"]["name"]);
+
+	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+
+	    if($check !== false) {
+	        //echo "File is an image - " . $check["mime"] . ".";
+
+	        // Save filename to database
+	        // basename($_FILES["fileToUpload"]["name"])
+
+	        // if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+	            // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	        // } else {
+	            // echo "Sorry, there was an error uploading your file.";
+	        // }
+
+	        // Add trip_image record to database
+	        $trip_img = new TripImage();
+	        $trip_img->img_path = basename($_FILES["fileToUpload"]["name"]);
+	        $trip_img->trip_id = $trip_id;
+	        $trip_img->save();
+	        
+	        $uploadOk = 1;
+	   	} else {
+	        // echo "File is not an image.";
+	        $uploadOk = 0;
+	    }
+
+		// $images = TripImage::where('trip_id', '=', 1)->get();
+		// return view('view_trip', ['images' => $images]);
+		return redirect('trip/' . $trip_id . '/gallery');
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -84,47 +121,5 @@ class TripImageController extends Controller {
 		$tripImage->delete();
 		return ['success' => true];
 	}
-
-	public function addImage($trip_id) {
-
-		////
-		// Check if image file is a actual image or fake image
-	    $target_dir = "../public/uploads";
-	    $target_file = $target_dir .'/'. basename($_FILES["fileToUpload"]["name"]);
-
-	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-
-	    if($check !== false) {
-	        //echo "File is an image - " . $check["mime"] . ".";
-
-	        // Save filename to db
-	        // basename($_FILES["fileToUpload"]["name"])
-
-	        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-	            // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	        } else {
-	            // echo "Sorry, there was an error uploading your file.";
-	        }
-
-	        // // add trip_image record to db
-	        $trip_img = new TripImage();
-	        $trip_img->img_path = basename($_FILES["fileToUpload"]["name"]);
-	        $trip_img->trip_id = $trip_id;
-	        $trip_img->save();
-	        
-	        // die($trip_id);
-
-	        $uploadOk = 1;
-	   	} else {
-	        // echo "File is not an image.";
-	        $uploadOk = 0;
-	    }
-
-		// $images = TripImage::where('trip_id', '=', 1)->get();
-		// return view('view_trip', ['images' => $images]);
-		return redirect('trip/' . $trip_id . '/gallery');
-	}
-
-
 
 }

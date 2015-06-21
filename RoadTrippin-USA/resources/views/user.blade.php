@@ -1,14 +1,17 @@
 @extends('layout')
 
 @section('content')	
-	<div class="internal-content">
-        <h1>User</h1>
-        <h3>Welcome {{ $user->username }}!!</h3>
-        <div class="user_img">Add User Image</div>  
-        <p>Member Since: June 2015</p>
-        <div class="delete_user">
-            <a href="user/delete">Delete</a> Your User Profile 
-            <span class="warning">(*This action cannot be undone*)</span>
-        </div>
+	<div class="home-background">
+        <div>
+            <div class="user-background">
+                <h1>Welcome {{ $user->username }}!!</h1>
+                <div class="user-img">Add User Image</div>  
+                <p>Member Since: June 2015</p>
+                <div class="delete-user">
+                    <a href="user/delete">Delete</a> Your User Profile 
+                    <span class="warning">(*Warning: This action cannot be undone*)</span>
+                </div>
+            </div>    
+        </div>    
     </div>
 @endsection

@@ -78,7 +78,7 @@ WELCOME PAGE
 				url("route66.jpg") no-repeat center;
 	background-size: cover;
 	width: 70%;
-	height: 70%;
+	height: 80%;
 	padding-top: 20px;
 	box-shadow: 1px 1px 500px 20px #222;
 	text-align: center;
@@ -109,14 +109,17 @@ h1 {
 }
 
 /**********
-/ Login Section
+/ Login Lightbox Section
 **********/
 .lightbox {
 	background-color: rgba(20, 20, 20, .3);
 	color: #EEE;
-	width: 200px;
+	width: 220px;
 	margin: auto;
 	display: inline-block;
+}
+
+.lightbox-login {
 	padding: 10px 0;
 }
 
@@ -128,9 +131,9 @@ h1 {
 	color: #222;
 }
 
-.lightbox-login {
+.lightbox-login-button {
 	background-color: rgba(20, 20, 20, .5);
-	color: #e4e4e4;
+	color: #E4E4E4;
 	text-decoration: none;
 	width: 115px;
 	display: inline-block;
@@ -150,7 +153,7 @@ HOME PAGE
 }
 
 .home-background > div {
-	background-color: #EEE;
+	background-color: rgba(20, 20, 20, .5);
 	margin: auto;
 	width: 960px;
 	min-height: 650px;
@@ -158,10 +161,14 @@ HOME PAGE
 }
 
 .home-container {
-	background-color: #EEE;
+	background-color: rgba(20, 20, 20, .5);
 	width: 375px;
 	margin: 200px 50px 0;
 	display: inline-block;
+}
+
+.home-container a {
+	color: #FDDB3B;
 }
 
 .home-media {
@@ -170,13 +177,6 @@ HOME PAGE
 	height: 300px;
 	width: 375px;
 }
-
-/*.home-media1 {
-	background-image: url('/images/us_map.jpg');
-	background: cover;
-	height: 100%;
-	width: 100%;
-}*/
 
 
 /****************************************************************
@@ -219,7 +219,7 @@ ROUTE PAGE
 
 
 /****************************************************************
-VIEW ALL PAGE 
+ALL TRIPS PAGE 
 *****************************************************************/
 .view-background {
 	background-image: url('/images/route66.jpg');
@@ -278,7 +278,7 @@ VIEW ALL PAGE
 
 
 /****************************************************************
-Image Gallery
+VIEW TRIP PAGE (Image Gallery)
 *****************************************************************/
 .wrapper {
 	display: flex;
@@ -310,7 +310,6 @@ Image Gallery
 	background-color: #DDD;
 	height: 150px;
 	width: 200px;
-	/*text-align: right;*/
 	position: relative;
 }
 
@@ -378,6 +377,55 @@ Image Gallery
 	text-align: center;
 }
 
+
+/****************************************************************
+ACCOUNT PAGE
+*****************************************************************/
+.user-background {
+	margin-top: 80px;
+	padding: 40px 0 0;
+}
+
+.user-img {
+	background-color: rgba(255, 255, 255, .5);
+	display: inline-block;
+	padding: 40px;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: 2px solid #222;
+}
+
+.user-background p {
+	color: #DDD;
+}
+
+.delete-user {
+	position: absolute;
+	bottom: -90px;
+	left: 0;
+	font-size: .5em;
+}
+
+.delete-user a {
+	text-decoration: none;
+	color: #222;
+}
+
+.delete-user .warning {
+	display: none;
+	color: red;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 2em;
+}
+
+.delete-user:hover span {
+	display: block;
+}
+
+
 /****************************************************************
 HEADER SECTION
 *****************************************************************/
@@ -417,35 +465,36 @@ HEADER SECTION
 }
 
 .user-profile {
-	background-color: #222;
+	/*background-color: #222;*/
 	position: absolute;
 	top: 10px;
 	right: 25px
 }
 
 .user-profile img {
-	background-color: blue;
+	background-color: rgba(255, 255, 255, .5);
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 }
 
 .user-profile div {
-	background-color: #EEE;
+	background-color: #222;
 	display: none;
 	position: absolute;
 	top: 60px;
-	right: 0;
+	right: -25px;
 }
 
 .user-profile:hover div {
 	display: block;
+	text-align: center;
 }
 
 .user-profile div a {
-	color: #222;
+	color: #FDDB3B;
 	display: block;
-	width: 150px;
+	width: 168px;
 	padding: 15px;
 }
 

@@ -7,7 +7,7 @@
             <div class="welcome-background">
                 <span class="title">Journey Across the USA</span>
                 <h1><span class="welcome-background-logo">RoadTrippin'</span> USA</h1>
-                <div class="lightbox">
+                <div class="lightbox lightbox-login">
                     
                     @if (count($errors) > 0)
                     <div class="alert alert-danger">
@@ -46,13 +46,13 @@
                         </div>
                         <div>
                             <div>
-                                <button type="submit" class="lightbox-login">Login</button>
+                                <button type="submit" class="lightbox-login-button">Login</button>
                             </div>
                             <div>
                                 <a class="" href="{{ url('/password/email') }}">Forgot Your Password?</a>
                             </div>
                         </div>
-                        
+
                     </form>
 
                 </div>
