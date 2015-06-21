@@ -4,12 +4,6 @@
 
     <div class="welcome-body">
         <div>
-            <header>
-                <nav>
-                    <div class="welcome-nav-logo">RoadTrippin'</div>
-                    <div><a class="welcome-nav-signup" href="auth/register">Sign Up</a></div>
-                </nav>
-            </header>
             <div class="welcome-background">
                 <span class="title">Journey Across the USA</span>
                 <h1><span class="welcome-background-logo">RoadTrippin'</span> USA</h1>
@@ -41,7 +35,6 @@
                                 <input type="password" class="textbox" name="password">
                             </div>
                         </div>
-
                         <div>
                             <div>
                                 <div class="checkbox">
@@ -51,7 +44,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div>
                             <div>
                                 <button type="submit" class="lightbox-login">Login</button>
@@ -60,7 +52,7 @@
                                 <a class="" href="{{ url('/password/email') }}">Forgot Your Password?</a>
                             </div>
                         </div>
-
+                        
                     </form>
 
                 </div>

@@ -18,18 +18,29 @@
 
 	<div class="header">
 	    <header>
-	      <nav>
-	        <div><a class="nav-logo" href="#">RoadTrippin'</a></div>
-	        <a class="nav-route" href="/route">Plan Route</a>
-	        <a class="nav-trips" href="/all_trips">My Trips</a>
-	        <div class="user-profile">
-		        <img src="/images/scott.jpg" alt="">
-		        <div>
-		          	<a href="#">Account</a>
-		          	<a href="/auth/logout">Logout</a>
-		        </div>
-	      	</div>
-	      </nav>
+	      	<nav>
+		        <div><a class="nav-logo" href="home">RoadTrippin'</a></div>
+
+		        @if (!Auth::check())
+
+		        @else
+		        <a class="nav-route" href="/route">Plan Route</a>
+		        <a class="nav-trips" href="/all_trips">My Trips</a>
+		        @endif
+
+		        @if (!Auth::check())
+		        <div><a class="welcome-nav-signup" href="auth/register">Sign Up</a></div>
+		        @else
+		        <div class="user-profile">
+			        <img src="/images/scott.jpg" alt="">
+			        <div>
+			          	<a href="#">Account</a>
+			          	<a href="/auth/logout">Logout</a>
+			        </div>
+		      	</div>
+		      	@endif
+		      	
+	      	</nav>		
 	    </header>
     </div>
 	

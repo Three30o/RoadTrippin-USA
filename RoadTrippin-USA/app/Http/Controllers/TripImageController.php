@@ -110,16 +110,9 @@ class TripImageController extends Controller {
 	        $trip_img = new TripImage();
 	        $trip_img->img_path = basename($_FILES["fileToUpload"]["name"]);
 	        $trip_img->trip_id = $trip_id;
-	        // $trip_img->description = Request::input('description');
-	        // $trip_img->date = Request::input('date');
-	        // $trip_img->lattitude = Request::input('lattitude');
-	        // $trip_img->longitude = Request::input('date');
 	        $trip_img->save();
 	        
 	        // die($trip_id);
-
-	        //return redirect('view_trip');
-
 
 	        $uploadOk = 1;
 	   	} else {

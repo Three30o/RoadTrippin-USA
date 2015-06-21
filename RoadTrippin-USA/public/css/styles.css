@@ -124,6 +124,10 @@ h1 {
 	padding: 5px;
 }
 
+.login input {
+	color: #222;
+}
+
 .lightbox-login {
 	background-color: rgba(20, 20, 20, .5);
 	color: #e4e4e4;
@@ -155,27 +159,24 @@ HOME PAGE
 
 .home-container {
 	background-color: #EEE;
-	width: 325px;
-	margin: 225px 50px 0;
+	width: 375px;
+	margin: 200px 50px 0;
 	display: inline-block;
 }
 
 .home-media {
 	background-color: blue;
 	display: block;
-	height: 200px;
-	width: 325px;
+	height: 300px;
+	width: 375px;
 }
 
-.home-description {
-	background-color: lightblue;
-}
-
-.home-description > span {
-	display: block;
-	background-color: pink;
-	color: red;
-}
+/*.home-media1 {
+	background-image: url('/images/us_map.jpg');
+	background: cover;
+	height: 100%;
+	width: 100%;
+}*/
 
 
 /****************************************************************
