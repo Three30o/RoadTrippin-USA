@@ -5,9 +5,9 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Trip;
 use App\TripImage;
-
-
-use Illuminate\Http\Request;
+use Input;
+use Request;
+// use Illuminate\Http\Request;
 
 class TripImageController extends Controller {
 
@@ -101,8 +101,21 @@ class TripImageController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id) {
-		return view();
+	public function editImage($trip_id) {
+		$trip_image_id = new TripImage();
+		// $trip_image_id->trip_image_id = Request::input('trip-image-id');
+		$trip_image_id->lattitude = Input::get('lattitude');
+		$trip_image_id->longitude = Input::get('longitude');
+		$trip_image_id->date = Input::get('date');
+		$trip_image_id->description = Input::get('description');
+		$trip_image_id->save();
+		return redirect('trip/' . $trip_id . '/gallery');
+		// dd($trip_image_id);
+
+
+// dd(Request::all());
+// 		return 'Hello ' . $trip_image_id;
+
 	}
 
 	/**

@@ -41,11 +41,11 @@ class UserController extends Controller {
 
     public function postEdit($id) {
         $user = new User($id);
-        $user->first_name = Request::get('first_name');
-        $user->last_name = Request::get('last_name');
-        $user->username = Request::get('username');
-        $user->email = Request::get('email');
-        $user->password = Request::get('password');
+        $user->first_name = Request::input('first_name');
+        $user->last_name = Request::input('last_name');
+        $user->username = Request::input('username');
+        $user->email = Request::input('email');
+        $user->password = Request::input('password');
         $user->save();
         return redirect('user');
     }

@@ -325,9 +325,6 @@ VIEW TRIP PAGE (Image Gallery)
 	background-color: rgba(20, 20, 20, .5);
 	display: flex;
 	text-align: center;
-	/*align-items: center;*/
-	/*justify-content: center;*/
-	/*align-content: center;*/
 	margin: 10px;
 }
 
@@ -385,7 +382,7 @@ VIEW TRIP PAGE (Image Gallery)
 	min-width: 300px;
 }
 
-.trip-edit input {
+.trip-edit input, textarea {
 	color: #222;
 }
 
@@ -414,8 +411,8 @@ ACCOUNT PAGE
 .user-img img{
 	background-color: rgba(255, 255, 255, .5);
 	display: inline-block;
-	width: 350px;
-	height: 350px;
+	width: 300px;
+	height: 300px;
 	border-radius: 50%;
 	border: 2px solid #222;
 }

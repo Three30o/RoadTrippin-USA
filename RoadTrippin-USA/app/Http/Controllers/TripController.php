@@ -100,7 +100,7 @@ class TripController extends Controller {
 
 		// print_r($images[0]["img_path"]);
 
-		return view('view_trip', ['images' => $images]);
+		return view('view_trip', ['images' => $images, 'trip_id' => $trip_id]);
 
 	}
 

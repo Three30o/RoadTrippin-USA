@@ -9,7 +9,7 @@ $(function () {
 
 	});
 
-	$('.trip-edit .close').click(function (){
+	$('.trip-edit .close').click(function(){
 		$('.trip-edit').removeClass('show');
 	});
 
