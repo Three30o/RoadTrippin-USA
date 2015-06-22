@@ -9,8 +9,6 @@
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="/javascript/gmaps.js"></script>
 	<script src="/javascript/main.js"></script>
 	<script>var _token = '{{ csrf_token() }}'</script>
 </head>
@@ -19,7 +17,16 @@
 	<div class="header">
 	    <header>
 	      	<nav>
-		        <div><a class="nav-logo" href="home">RoadTrippin'</a></div>
+
+	      		@if (!Auth::check())
+		        <div class="nav-logo">
+		        	<a href="/welcome"><img src="/images/tire_logo.jpg" height="100%" width="100%" alt=""></a>
+		        </div>
+		        @else
+		        <div class="nav-logo">
+		        	<a href="/home"><img src="/images/tire_logo.jpg" heigh="100%" width="100%" alt=""></a>
+		        </div>
+		        @endif
 
 		        @if (!Auth::check())
 
@@ -29,7 +36,7 @@
 		        @endif
 
 		        @if (!Auth::check())
-		        <div><a class="welcome-nav-signup" href="auth/register">Sign Up</a></div>
+		        <div><a class="welcome-nav-signup" href="/auth/register">Sign Up</a></div>
 		        @else
 		        <div class="user-profile">
 			        <img src="/images/scott.jpg" alt="">

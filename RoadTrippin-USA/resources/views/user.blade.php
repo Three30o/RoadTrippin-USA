@@ -5,7 +5,9 @@
         <div>
             <div class="user-background">
                 <h1>Welcome {{ $user->username }}!!</h1>
-                <div class="user-img">Add User Image</div>  
+                <div class="user-img">
+                    <img src="/images/scott.jpg" alt="">
+                </div>  
                 <p>Member Since: June 2015</p>
                 <div class="delete-user">
                     <a href="user/delete">Delete</a> Your User Profile 

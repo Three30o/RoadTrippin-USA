@@ -5,8 +5,11 @@
     <div class="welcome-body">
         <div>
             <div class="welcome-background">
-                <span class="title">Journey Across the USA</span>
-                <h1><span class="welcome-background-logo">RoadTrippin'</span> USA</h1>
+                <span class="title title-login">Journey Across the USA</span>
+                <h1>
+                    <span class="welcome-background-logo">RoadTrippin'</span>
+                    <span class="u">U</span><span class="s">S</span><span class="a">A</span> 
+                </h1>
                 <div class="lightbox lightbox-login">
                     
                     @if (count($errors) > 0)

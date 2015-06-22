@@ -33,17 +33,17 @@ WELCOME PAGE
 	z-index: 10;
 }
 
-.welcome-nav-logo {
+/*.welcome-nav-logo {
 	color: #FDDB3B;
 	font-family: Codystar;
 	font-size: 2em;
 	position: absolute;
 	top: 20px;
 	left: 10px;
-}
+}*/
 
 .welcome-nav-signup {
-	color: #E4E4E4;
+	color: #D3C71D;
 	position: absolute;
 	top: 20px;
 	right: 10px;
@@ -77,7 +77,7 @@ WELCOME PAGE
 	            linear-gradient(0deg, #222, transparent 70%),
 				url("route66.jpg") no-repeat center;
 	background-size: cover;
-	width: 70%;
+	width: 960px;
 	height: 80%;
 	padding-top: 20px;
 	box-shadow: 1px 1px 500px 20px #222;
@@ -85,18 +85,21 @@ WELCOME PAGE
 }
 
 .title {
-	color: #e4e4e4;
+	color: #E4E4E4;
 	font-size: 1.5em;
-	border-bottom: 2px solid;
+}
+
+.title-login {
 	padding-bottom: 10px;
+	border-bottom: 2px solid;
 }
 
 .welcome-background-logo, h1 {
-	color: #FDDB3B;
 	text-transform: uppercase;
 	line-height: 1.3;
 	text-shadow: 0 2px 2px rgba(0, 0, 0, .8);
 	margin: 12px 0 15px;
+	color: #D3C71D;
 }
 
 .welcome-background-logo {
@@ -107,6 +110,7 @@ h1 {
 	font-family: "Permanent Marker";
 	font-size: 3.625em;
 }
+	
 
 /**********
 / Login Lightbox Section
@@ -114,12 +118,9 @@ h1 {
 .lightbox {
 	background-color: rgba(20, 20, 20, .3);
 	color: #EEE;
-	width: 220px;
+	width: 250px;
 	margin: auto;
 	display: inline-block;
-}
-
-.lightbox-login {
 	padding: 10px 0;
 }
 
@@ -137,18 +138,24 @@ h1 {
 	text-decoration: none;
 	width: 115px;
 	display: inline-block;
-	margin-top: 10px;
+	margin: 10px 0 10px;
 	padding: 10px;
 	border-radius: 30px;
 }
 
+/**********
+/ Register Page
+**********/
+.title-signup {
+	text-decoration: underline;
+}
 
 /****************************************************************
 HOME PAGE
 *****************************************************************/
 .home-background {
-	background-image: url('/images/route66.jpg');
-	overflow: hidden;
+	background: url("/images/route66.jpg") no-repeat center;
+	background-attachment: fixed;
 	background-size: cover;
 }
 
@@ -156,19 +163,19 @@ HOME PAGE
 	background-color: rgba(20, 20, 20, .5);
 	margin: auto;
 	width: 960px;
-	min-height: 650px;
+	min-height: 625px;
 	text-align: center;
 }
 
 .home-container {
 	background-color: rgba(20, 20, 20, .5);
 	width: 375px;
-	margin: 200px 50px 0;
+	margin: 175px 50px 0;
 	display: inline-block;
 }
 
 .home-container a {
-	color: #FDDB3B;
+	color: #D3C71D;
 }
 
 .home-media {
@@ -182,14 +189,14 @@ HOME PAGE
 /****************************************************************
 ROUTE PAGE
 *****************************************************************/
-.route-background {
-	background-image: url('/images/route66.jpg');
-	overflow: hidden;
+.route-background {	
+	background: url("/images/route66.jpg") no-repeat center;
+	background-attachment: fixed;
 	background-size: cover;
 }
 
 .route-background > div {
-	background-color: #EEE;
+	background-color: rgba(20, 20, 20, .5);
 	margin: 0 auto;
 	width: 960px;
 	min-height: 50px;
@@ -222,13 +229,13 @@ ROUTE PAGE
 ALL TRIPS PAGE 
 *****************************************************************/
 .view-background {
-	background-image: url('/images/route66.jpg');
-	overflow: hidden;
+	background: url("/images/route66.jpg") no-repeat center;
+	background-attachment: fixed;
 	background-size: cover;
 }
 
 .view-background > div {
-	background-color: #EEE;
+	background-color: rgba(20, 20, 20, .5);
 	margin: auto;
 	width: 960px;
 }
@@ -238,13 +245,12 @@ ALL TRIPS PAGE
 	overflow: hidden;
 	display: inline-block;
 	width: 100%;
-
-	margin: 40px 0 40px;
-	padding: 20px 40px;
+	margin: 20px 0 20px;
+	padding: 20px 20px;
 }
 
 .view-container:first-of-type {
-	margin: 120px 0 0 0;
+	margin: 120px 0 20px 0;
 }
 
 .view-media {
@@ -252,6 +258,11 @@ ALL TRIPS PAGE
 	height: 175px;
 	width: 200px;
 	float: left;
+}
+
+.view-media1 {
+	background: url("/uploads/pic1.jpg") no-repeat center;
+	background-size: cover;
 }
 
 .view-description {
@@ -280,6 +291,18 @@ ALL TRIPS PAGE
 /****************************************************************
 VIEW TRIP PAGE (Image Gallery)
 *****************************************************************/
+.view-background {
+	background: url("/images/route66.jpg") no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.view-background > div {
+	background-color: rgba(20, 20, 20, .5);
+	margin: auto;
+	width: 960px;
+}
+
 .wrapper {
 	display: flex;
 	justify-content: center;
@@ -289,7 +312,7 @@ VIEW TRIP PAGE (Image Gallery)
 }
 
 .wrapper:first-of-type {
-	background-color: #EEE;
+	background-color: rgba(20, 20, 20, .5);
 	margin: 60px 0 -16px;
 	padding: 40px 0 0;
 }
@@ -299,15 +322,17 @@ VIEW TRIP PAGE (Image Gallery)
 }
 
 .trip-container {
-	background-color: #EEE;
+	background-color: rgba(20, 20, 20, .5);
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
+	/*align-items: center;*/
+	/*justify-content: center;*/
+	/*align-content: center;*/
 	margin: 10px;
 }
 
 .trip-media {
-	background-color: #DDD;
+	background-color: rgba(100, 100, 100, .1);
 	height: 150px;
 	width: 200px;
 	position: relative;
@@ -383,15 +408,14 @@ ACCOUNT PAGE
 *****************************************************************/
 .user-background {
 	margin-top: 80px;
-	padding: 40px 0 0;
+	padding: 40px 0;
 }
 
-.user-img {
+.user-img img{
 	background-color: rgba(255, 255, 255, .5);
 	display: inline-block;
-	padding: 40px;
-	width: 300px;
-	height: 300px;
+	width: 350px;
+	height: 350px;
 	border-radius: 50%;
 	border: 2px solid #222;
 }
@@ -402,7 +426,7 @@ ACCOUNT PAGE
 
 .delete-user {
 	position: absolute;
-	bottom: -90px;
+	bottom: -45px;
 	left: 0;
 	font-size: .5em;
 }
@@ -440,17 +464,18 @@ HEADER SECTION
 }
 
 .nav-logo {
-	color: #FDDB3B;
-	font-family: Codystar;
-	text-decoration: none;
-	font-size: 2em;
 	position: absolute;
-	top: 20px;
-	left: 10px;
+	top: 0;
+	left: 0;
+}
+
+.nav-logo img {
+	height: 80px;
+	width: 168px;
 }
 
 .nav-route, .nav-trips {
-	color: #FDDB3B;
+	color: #D3C71D;
 	text-decoration: none;
 	position: absolute;
 	top: 30px;
@@ -492,7 +517,7 @@ HEADER SECTION
 }
 
 .user-profile div a {
-	color: #FDDB3B;
+	color: #D3C71D;
 	display: block;
 	width: 168px;
 	padding: 15px;
@@ -519,7 +544,7 @@ footer span {
 }
 
 .fa:hover {
-	color: #FDDB3B;
+	color: #D3C71D;
 }
 
 .fa-twitter-square {

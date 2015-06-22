@@ -4,6 +4,7 @@
 
 	<div class="view-background">
   		<div>
+  		
   			<form action="addImage" method="POST" enctype="multipart/form-data">
   				<input type="hidden" name="_token" value="{{ csrf_token() }}"> 
 	  			<div class="wrapper">

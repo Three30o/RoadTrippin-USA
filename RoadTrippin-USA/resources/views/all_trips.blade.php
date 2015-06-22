@@ -22,8 +22,8 @@
 	  					Cumque odit asperiores, distinctio, magni quis doloribus molestiae. 
 	  				</p>
 	  			</div>
-	  		</div>	 --}}
-	  		<div class="view-container">
+	  		</div> --}}	
+	  		{{-- <div class="view-container">
 	  			<div class="view-media"></div>
 	  			<div class="view-description">
 	  				<div><a class="view-location" href="view_trip">Jacksonville, NC - Omaha, NE</a></div>
@@ -32,7 +32,7 @@
 	  					Cumque odit asperiores, distinctio, magni quis doloribus molestiae. 
 	  				</p>
 	  			</div>
-	  		</div>
+	  		</div> --}}
   		</div>
   	</div>
 @endsection

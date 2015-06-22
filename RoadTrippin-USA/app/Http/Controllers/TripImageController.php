@@ -48,6 +48,12 @@ class TripImageController extends Controller {
 		return redirect('trip/' . $trip_id . '/gallery');
 	}
 
+	public function delete($id) {
+		$tripImage = TripImage::find($id);
+		$tripImage->delete();
+		return ['success' => true];
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -108,18 +114,6 @@ class TripImageController extends Controller {
 	public function postEdit($id)
 	{
 		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function delete($id) {
-		$tripImage = TripImage::find($id);
-		$tripImage->delete();
-		return ['success' => true];
 	}
 
 }

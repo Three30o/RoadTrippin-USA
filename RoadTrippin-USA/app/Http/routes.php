@@ -27,10 +27,22 @@ Route::controllers([
 
 Route::get('auth/register', 'UserController@create');
 Route::post('auth/register', 'UserController@postCreate');
-Route::get('auth/login', 'UserController@login');
+Route::get('welcome', 'UserController@login');
 Route::get('auth/logout', 'UserController@logout');
 Route::get('user', 'UserController@view');
 Route::get('user/delete', 'UserController@logout');
+
+
+/****************************************************************
+    Trip_image Routes
+*****************************************************************/
+
+Route::post('trip/{trip_id}/gallery', 'TripImageController@addImage');
+Route::post('trip/{trip_image_id}/delete', 'TripImageController@delete');
+
+Route::post('trip/{trip_id}/addImage', 'TripImageController@addImage');
+// Route::post('trip/{trip_id}/postEdit', 'TripImageController@');
+
 
 /****************************************************************
     Trip Routes
@@ -44,12 +56,4 @@ Route::get('trip/{trip_id}/gallery', 'TripController@viewGallery');
 
 // Route::get('view', 'TripController@');
 
-/****************************************************************
-    Trip_image Routes
-*****************************************************************/
 
-Route::post('trip/{trip_id}/gallery', 'TripImageController@addImage');
-Route::post('trip/{trip_image_id}/delete', 'TripImageController@delete');
-
-Route::post('trip/{trip_id}/addImage', 'TripImageController@addImage');
-// Route::post('trip/{trip_id}/postEdit', 'TripImageController@');

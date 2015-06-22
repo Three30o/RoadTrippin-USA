@@ -36,8 +36,9 @@ create table trip (
 
 INSERT INTO trip (user_id, name, `date`, description, origin_city, origin_state, destination_city, destination_state)
 	values 
-	(1, "Moved from Omaha to Portland", "2014-07-29", "My move to Oregon began on a Wednesday ...", "Omaha", "NE", "Portland", "OR");
-	-- (1, "Pick Up My New Car", "2014-01-25", "Travelling with my friend Seth ..." "Jacksonville", "NC", "Omaha", "NE");
+	(1, "Moved from Portland to Phoenix", "2015-04-04", "I had 48 hours to travel 1,647 miles to make it in time to celebrate my friend Josh's birthday in Omaha, NE. I left at 5:30am and began the most beautiful drive East along the Columbia River. I stopped at Multnomah Falls ...", "Portland", "OR", "Phoexix", "AZ"),
+	(1, "Moved from Omaha to Portland", "2014-07-29", "My move to Oregon began on a Wednesday morning with my best friend Jill. Our first stop was to visit the infamous Corn Palace in Mitchell, SD, but unfortunately they had just taken all the kernels off the exterior and ...", "Omaha", "NE", "Portland", "OR"),
+	(1, "Jacksonville, NC to Omaha, NE", "2014-01-25", "After my friend Seth and I landed in Jacksonville, NC to pick up the 2012 Kia Sorento SX I had purchased online, we decided to head towards Charlotte to visit my friend Tony I had helped move 4 months prior...", "Jacksonville", "NC", "Omaha", "NE");
 
 
 create table trip_image (
