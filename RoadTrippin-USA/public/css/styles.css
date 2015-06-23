@@ -63,15 +63,15 @@ LOGIN PAGE
 }
 
 .title-login {
-	padding-bottom: 10px;
 	border-bottom: 2px solid;
+	padding-bottom: 10px;
 }
 
-.login-background-logo, h1 {
+.login-feature > h1, .login-background-logo {
 	text-transform: uppercase;
 	line-height: 1.3;
 	text-shadow: 0 2px 2px rgba(0, 0, 0, .8);
-	margin: 12px 0 15px;
+	margin: 30px 0 15px;
 	color: #D3C71D;
 }
 
@@ -90,10 +90,10 @@ h1 {
 .lightbox {
 	background-color: rgba(20, 20, 20, .3);
 	color: #EEE;
-	width: 250px;
+	width: 225px;
 	margin: auto;
 	display: inline-block;
-	padding: 10px 0;
+	padding: 13px 0;
 }
 
 .lightbox-login {
@@ -119,7 +119,7 @@ h1 {
 /****************************************************************
 SIGNUP / REGISTER PAGE
 *****************************************************************/
-.title-signup {
+.lightbox .title-signup {
 	text-decoration: underline;
 }
 
