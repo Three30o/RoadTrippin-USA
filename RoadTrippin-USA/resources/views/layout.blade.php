@@ -20,7 +20,7 @@
 
 	      		@if (!Auth::check())
 		        <div class="nav-logo">
-		        	<a href="/welcome"><img src="/images/tire_logo.jpg" height="100%" width="100%" alt=""></a>
+		        	<a href="/auth/login"><img src="/images/tire_logo.jpg" height="100%" width="100%" alt=""></a>
 		        </div>
 		        @else
 		        <div class="nav-logo">
@@ -36,7 +36,7 @@
 		        @endif
 
 		        @if (!Auth::check())
-		        <div><a class="welcome-nav-signup" href="/auth/register">Sign Up</a></div>
+		        <div><a class="login-nav-signup" href="/auth/register">Sign Up</a></div>
 		        @else
 		        <div class="user-profile">
 			        <img src="/images/scott.jpg" alt="">

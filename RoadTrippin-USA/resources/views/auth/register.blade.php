@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-<div class="welcome-body">
+<div class="login-background">
 	<div>
-		<div class="welcome-background">
+		<div class="login-feature">
 			<div class="lightbox">
 				<span class="title title-signup">Sign Up</span>
 

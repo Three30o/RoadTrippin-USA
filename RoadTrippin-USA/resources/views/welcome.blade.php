@@ -2,12 +2,12 @@
 
 @section("content")
 
-    <div class="welcome-body">
+    <div class="login-background">
         <div>
-            <div class="welcome-background">
+            <div class="login-feature">
                 <span class="title title-login">Journey Across the USA</span>
                 <h1>
-                    <span class="welcome-background-logo">RoadTrippin'</span>
+                    <span class="login-background-logo">RoadTrippin'</span>
                     <span class="u">U</span><span class="s">S</span><span class="a">A</span> 
                 </h1>
                 <div class="lightbox lightbox-login">

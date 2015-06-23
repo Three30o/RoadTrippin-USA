@@ -27,7 +27,7 @@ Route::controllers([
 
 Route::get('auth/register', 'UserController@create');
 Route::post('auth/register', 'UserController@postCreate');
-Route::get('welcome', 'UserController@login');
+Route::get('auth/login', 'UserController@login');
 Route::get('auth/logout', 'UserController@logout');
 Route::get('user', 'UserController@view');
 Route::get('user/delete', 'UserController@logout');
