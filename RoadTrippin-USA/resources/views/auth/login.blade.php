@@ -26,13 +26,13 @@
                     <form role="form" method="POST" action="{{ url('/auth/login') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                        <div class="login">
+                        <div class="lightbox-login">
                             <label>E-mail:</label>
                             <div>
                                 <input type="email" class="textbox" name="email" value="{{ old('email') }}">
                             </div>
                         </div>
-                        <div class="login">
+                        <div class="lightbox-login">
                             <label>Password:</label>
                             <div>
                                 <input type="password" class="textbox" name="password">

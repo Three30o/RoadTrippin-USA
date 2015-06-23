@@ -13,7 +13,6 @@
 	<script>var _token = '{{ csrf_token() }}'</script>
 </head>
 <body>
-
 	<div class="header">
 	    <header>
 	      	<nav>
@@ -66,6 +65,5 @@
 			</div>
 		</footer>
 	</div>
-
 </body>
 </html>

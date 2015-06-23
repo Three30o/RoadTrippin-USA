@@ -1,7 +1,6 @@
 @extends("layout")
 
 @section("content")
-
     <div class="login-background">
         <div>
             <div class="login-feature">
@@ -55,12 +54,9 @@
                                 <a class="" href="{{ url('/password/email') }}">Forgot Your Password?</a>
                             </div>
                         </div>
-
                     </form>
-
                 </div>
             </div>  
         </div>
     </div>
-
 @endsection

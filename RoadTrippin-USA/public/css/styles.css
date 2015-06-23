@@ -12,7 +12,7 @@ html {
 
 
 /****************************************************************
-WELCOME PAGE
+PAGE BACKGROUNDS
 *****************************************************************/
 .login-background, .home-background, .route-background, .view-background {
 	background: url("/images/route66.jpg") no-repeat center;
@@ -20,9 +20,9 @@ WELCOME PAGE
 	background-size: cover;
 }
 
-/**********
-/ Featured Background Section
-**********/
+/****************************************************************
+LOGIN PAGE
+*****************************************************************/
 .login-background > div {
 	display: flex;
 	align-items: center;
@@ -31,6 +31,9 @@ WELCOME PAGE
 	margin-top: 80px;
 }
 
+/**********
+/ Login Feature Section
+**********/
 .login-feature {
 	background: linear-gradient(#222, transparent 70%),
 	            linear-gradient(0deg, #222, transparent 70%),
@@ -81,7 +84,6 @@ h1 {
 	font-size: 3.625em;
 }
 	
-
 /**********
 / Login Lightbox Section
 **********/
@@ -94,11 +96,11 @@ h1 {
 	padding: 10px 0;
 }
 
-.login {
+.lightbox-login {
 	padding: 5px;
 }
 
-.login input {
+.lightbox-login input {
 	color: #222;
 }
 
@@ -113,22 +115,18 @@ h1 {
 	border-radius: 30px;
 }
 
-/**********
-/ Register Page
-**********/
+
+/****************************************************************
+SIGNUP / REGISTER PAGE
+*****************************************************************/
 .title-signup {
 	text-decoration: underline;
 }
 
+
 /****************************************************************
 HOME PAGE
 *****************************************************************/
-/*.home-background {
-	background: url("/images/route66.jpg") no-repeat center;
-	background-attachment: fixed;
-	background-size: cover;
-}*/
-
 .home-background > div {
 	background-color: rgba(20, 20, 20, .5);
 	margin: auto;
@@ -144,10 +142,6 @@ HOME PAGE
 	display: inline-block;
 }
 
-.home-container a {
-	color: #D3C71D;
-}
-
 .home-media {
 	background-color: blue;
 	display: block;
@@ -155,16 +149,14 @@ HOME PAGE
 	width: 375px;
 }
 
+.home-container a {
+	color: #D3C71D;
+}
+
 
 /****************************************************************
 ROUTE PAGE
 *****************************************************************/
-/*.route-background {	
-	background: url("/images/route66.jpg") no-repeat center;
-	background-attachment: fixed;
-	background-size: cover;
-}*/
-
 .route-background > div {
 	background-color: rgba(20, 20, 20, .5);
 	margin: 0 auto;
@@ -198,12 +190,6 @@ ROUTE PAGE
 /****************************************************************
 ALL TRIPS PAGE 
 *****************************************************************/
-/*.view-background {
-	background: url("/images/route66.jpg") no-repeat center;
-	background-attachment: fixed;
-	background-size: cover;
-}*/
-
 .view-background > div {
 	background-color: rgba(20, 20, 20, .5);
 	margin: auto;
@@ -228,11 +214,6 @@ ALL TRIPS PAGE
 	height: 175px;
 	width: 200px;
 	float: left;
-}
-
-.view-media1 {
-	background: url("/uploads/pic1.jpg") no-repeat center;
-	background-size: cover;
 }
 
 .view-description, .view-location, .view-description > p {
@@ -260,12 +241,6 @@ ALL TRIPS PAGE
 /****************************************************************
 VIEW TRIP PAGE (Image Gallery)
 *****************************************************************/
-/*.view-background {
-	background: url("/images/route66.jpg") no-repeat center;
-	background-attachment: fixed;
-	background-size: cover;
-}*/
-
 .view-background > div {
 	background-color: rgba(20, 20, 20, .5);
 	margin: auto;
@@ -304,6 +279,14 @@ VIEW TRIP PAGE (Image Gallery)
 	position: relative;
 }
 
+.trip-media input {
+	color: #FDDB3B;
+	padding: 40px 0 0 9px;
+}
+
+/**********
+/ Font Awesome Edit & Trash Icons
+**********/
 .fa-pencil-square-o, .fa-trash {
 	color: #EEE;
 	position: absolute;
@@ -319,10 +302,9 @@ VIEW TRIP PAGE (Image Gallery)
 	right: 0;
 }
 
-.trip-media p {
-	color: yellow;
-}
-
+/**********
+/ Image Lightbox Edit Form
+**********/
 .trip-edit {
 	background-color: rgba(0, 0, 0, .7);
 	color: #FDDB3B;
@@ -367,6 +349,18 @@ VIEW TRIP PAGE (Image Gallery)
 	margin: 10px 0;
 	text-align: center;
 }
+
+
+/*.lightbox-login-button {
+	background-color: rgba(20, 20, 20, .5);
+	color: #E4E4E4;
+	text-decoration: none;
+	width: 115px;
+	display: inline-block;
+	margin: 10px 0 10px;
+	padding: 10px;
+	border-radius: 30px;
+}*/
 
 
 /****************************************************************

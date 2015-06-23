@@ -1,19 +1,18 @@
 @extends("layout")
 
 @section("content")
-
 	<div class="view-background">
   		<div>
-
   			<form action="addImage" method="POST" enctype="multipart/form-data">
   				<input type="hidden" name="_token" value="{{ csrf_token() }}"> 
 	  			<div class="wrapper">
 		  			<div class="trip-container">
 		        		<div class="trip-media trip-media1">
-		        			<p>Add Image</p>
 		        			<div>
 	  							<input type="file" name="fileToUpload">
-	  							<button type="submit" action="trip/{trip_id}/gallery">Submit</button>
+	  							<button type="submit" action="trip/{trip_id}/gallery" class="lightbox-login-button">
+	  								Save Image
+	  							</button>
 	  						</div>	
 		        		</div>	
 		  			</div>
@@ -86,10 +85,8 @@
 		  			</div>
 			  	</div>
 		  	</form>
-
   		</div>
   	</div>
-
 
   	<div class="trip-edit">
 		<form action="/trip/{{$trip_id}}/editImage" method="POST" name="trip-edit">	
@@ -108,5 +105,4 @@
 			<i class="fa fa-times close" title="Close"></i>
 		</form>	
 	</div>
-
 @endsection
