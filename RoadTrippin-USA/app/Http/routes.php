@@ -48,6 +48,7 @@ Route::post('trip/{trip_id}/editImage', 'TripImageController@editImage');
 *****************************************************************/
 
 Route::get('all_trips', 'TripController@viewTrips');
+Route::post('all_trips', 'TripController@viewTrips');
 Route::get('route', 'TripController@createTrip');
 Route::get('trip/{trip_id}/gallery', 'TripController@viewGallery');
 

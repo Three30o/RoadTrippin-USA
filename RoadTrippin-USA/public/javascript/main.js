@@ -1,5 +1,6 @@
 $(function () {
 	
+	//Functionality for the Edit Icon on the View_Trip.blade
 	$('.edit-image').click(function() {
 		$('.trip-edit').addClass('show');
 
@@ -18,11 +19,12 @@ $(function () {
 
 	});
 
+	//Functionality for the Close Icon on the View_Trip.blade
 	$('.trip-edit .close').click(function(){
 		$('.trip-edit').removeClass('show');
 	});
 
-
+	//Functionality for the Delete Icon on the View_Trip.blade
 	$('.delete-image').click(function() {
 
 		var id = $(this).parents('.trip-container').data('id');

@@ -6,10 +6,7 @@
         <div>
             <div class="login-feature">
                 <span class="title title-login">Journey Across the USA</span>
-                <h1>
-                    <span class="login-background-logo">RoadTrippin'</span>
-                    {{-- <span class="u">U</span><span class="s">S</span><span class="a">A</span>  --}}
-                </h1>
+                <h1 class="login-background-logo">RoadTrippin'</h1>
                 <div class="lightbox lightbox-login">
                     
                     @if (count($errors) > 0)
@@ -52,7 +49,7 @@
                                 <button type="submit" class="lightbox-login-button">Login</button>
                             </div>
                             <div>
-                                <a class="" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+                                <a class="forgot" href="{{ url('/password/email') }}">Forgot Your Password?</a>
                             </div>
                         </div>
 

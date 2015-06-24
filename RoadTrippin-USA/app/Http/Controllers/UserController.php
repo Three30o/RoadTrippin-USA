@@ -29,8 +29,8 @@ class UserController extends Controller {
         Allows for editing of Users
     **********************************************/
 
-    public function edit($id) {
-        $user = new User($id);
+    public function edit($user_id) {
+        $user = new User($user_id);
         return view('edit_user');
     }
 
@@ -39,8 +39,8 @@ class UserController extends Controller {
         CANNOT yet edit passwords.
     **********************************************/
 
-    public function postEdit($id) {
-        $user = new User($id);
+    public function postEdit($user_id) {
+        $user = new User($user_id);
         $user->first_name = Request::input('first_name');
         $user->last_name = Request::input('last_name');
         $user->username = Request::input('username');
