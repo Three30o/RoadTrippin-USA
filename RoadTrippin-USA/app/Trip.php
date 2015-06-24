@@ -7,6 +7,7 @@ use App\User;
 class Trip extends Model {
 
 	protected $table = 'trip';
+	protected $primaryKey = 'trip_id';
 
 	protected $fillable = [
 							'user_id', 
@@ -21,6 +22,18 @@ class Trip extends Model {
 
 	public function user() {
 		return $this->belongsTo("App\User", 'user_id');
+	}
+
+	public function tripImages() {
+		return $this->hasMany("App\TripImage");
+	}
+
+	public function firstImage() {
+		$images = $this->tripImages;
+		if (count($images) == 0) {
+			return "Add Image";
+		}
+		return $images[0]->img_path;
 	}
 
 }

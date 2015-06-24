@@ -16,8 +16,4 @@ class TripImage extends Model {
 		return $this->belongsTo("App\Trip", 'trip_id');
 	}
 
-	// public static function getByTripId($tripId){
-		
-	// }
-
 }

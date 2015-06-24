@@ -6,8 +6,8 @@
             <div class="login-feature">
                 <span class="title title-login">Journey Across the USA</span>
                 <h1>
-                    <span class="login-background-logo">RoadTrippin'</span>
-                    <span class="u">U</span><span class="s">S</span><span class="a">A</span> 
+                    <span class="login-background-logo">Road Trippin'</span>
+                    {{-- <span class="u">U</span><span class="s">S</span><span class="a">A</span>  --}}
                 </h1>
                 <div class="lightbox lightbox-login">
                     

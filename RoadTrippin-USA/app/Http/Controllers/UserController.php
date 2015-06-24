@@ -56,7 +56,7 @@ class UserController extends Controller {
     **********************************************/
 
     public function login() {
-        return view('welcome');
+        return view('auth/login');
     }
 
     /**********************************************
@@ -66,7 +66,7 @@ class UserController extends Controller {
 
     public function logout() {
         Auth::logout();
-        return redirect('welcome');
+        return redirect('auth/login');
     }
 
     /**********************************************
@@ -75,7 +75,7 @@ class UserController extends Controller {
 
     public function view() {
         if (!Auth::check()) {
-            return redirect('welcome');
+            return redirect('auth/login');
         } 
         $user = Auth::user();
         return view('/user', ['user' => $user]);

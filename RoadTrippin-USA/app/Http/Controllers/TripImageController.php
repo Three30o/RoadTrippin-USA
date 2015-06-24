@@ -43,6 +43,17 @@ class TripImageController extends Controller {
 		return redirect('trip/' . $trip_id . '/gallery');
 	}
 
+		public function editImage($trip_id) {
+// dd(Input::all());
+		$trip_image = TripImage::find($trip_id);
+		$trip_image->lattitude = Input::get('lattitude');
+		$trip_image->longitude = Input::get('longitude');
+		$trip_image->date = Input::get('date');
+		$trip_image->description = Input::get('description');
+		$trip_image->save();
+		return redirect('trip/' . $trip_id . '/gallery');
+	}
+
 	public function delete($id) {
 		$tripImage = TripImage::find($id);
 		$tripImage->delete();
@@ -89,39 +100,4 @@ class TripImageController extends Controller {
 	{
 		//
 	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function editImage($trip_id) {
-		$trip_image_id = new TripImage();
-		// $trip_image_id->trip_image_id = Request::input('trip-image-id');
-		$trip_image_id->lattitude = Input::get('lattitude');
-		$trip_image_id->longitude = Input::get('longitude');
-		$trip_image_id->date = Input::get('date');
-		$trip_image_id->description = Input::get('description');
-		$trip_image_id->save();
-		return redirect('trip/' . $trip_id . '/gallery');
-		// dd($trip_image_id);
-
-
-// dd(Request::all());
-// 		return 'Hello ' . $trip_image_id;
-
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function postEdit($id)
-	{
-		//
-	}
-
 }

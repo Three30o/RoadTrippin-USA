@@ -41,7 +41,6 @@ Route::post('trip/{trip_id}/gallery', 'TripImageController@addImage');
 Route::post('trip/{trip_image_id}/delete', 'TripImageController@delete');
 Route::post('trip/{trip_id}/addImage', 'TripImageController@addImage');
 Route::post('trip/{trip_id}/editImage', 'TripImageController@editImage');
-// Route::post('trip/{trip_id}/postEdit', 'TripImageController@');
 
 
 /****************************************************************

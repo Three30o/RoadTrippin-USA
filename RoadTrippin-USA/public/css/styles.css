@@ -76,7 +76,7 @@ LOGIN PAGE
 }
 
 .login-background-logo {
-	font-family: Codystar;
+	font-family: Syncopate;
 }
 
 h1 {
@@ -210,7 +210,8 @@ ALL TRIPS PAGE
 }
 
 .view-media {
-	background-color: blue;
+	/*background-color: blue;*/
+	background-size: cover;
 	height: 175px;
 	width: 200px;
 	float: left;
@@ -243,7 +244,7 @@ VIEW TRIP PAGE (Image Gallery)
 *****************************************************************/
 .view-background > div {
 	background-color: rgba(20, 20, 20, .5);
-	margin: auto;
+	/*margin: auto;*/
 	width: 960px;
 }
 
@@ -369,6 +370,10 @@ ACCOUNT PAGE
 .user-background {
 	margin-top: 80px;
 	padding: 40px 0;
+}
+
+.user-background h1 {
+	color: #FDDB3B;
 }
 
 .user-img img{

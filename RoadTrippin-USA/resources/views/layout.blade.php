@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>RoadTrippin' USA</title>
+	<link href='http://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/normalize.css">
