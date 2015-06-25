@@ -4,8 +4,11 @@
 	<div class="route-background">
         <div>  
         	<div class="login-feature">
-              	<div id="map"></div>
 
+                {{-- GMAPS.js --}}
+              	<div id="map"></div>
+                
+                {{-- FORM TO CREATE NEW TRIP --}}
                 <div class="create-trip">
                     <form action="{{ url('/all_trips') }}" method="POST" name="trip-edit"> 
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -18,7 +21,7 @@
                         <input type="text" name="date" class="date"><br>
                         <label>Description: </label><br>
                         <textarea name="description" class="description" cols="30" rows="5"></textarea><br>
-                        <button type="submit" class="edit-image-button">Create Trip</button>
+                        <button type="submit" class="create-trip-button">Create Trip</button>
                     </form> 
                 </div>
 

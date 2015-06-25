@@ -15,7 +15,8 @@
 	
 	    <header>
 	      	<div>
-
+				
+				{{-- VALIDATE IF USER IS LOGGED IN --}}
 	      		@if (!Auth::check())
 		        <div class="nav-logo">
 		        	<div><a href="/home"><i class="fa fa-road"></i>RoadTrippin'</a></div>
@@ -40,10 +41,7 @@
 		        </div>
 		        @else
 		        <div class="user-profile">
-
                     <img src="/images/scott.jpg" alt="">
-                    
-
 			        <div>
 			          	<a href="/user">Account</a>
 			          	<a href="/auth/logout">Logout</a>

@@ -6,39 +6,44 @@ use Auth;
 
 class UserController extends Controller {
 
-    /**********************************************
-        Uses Laravel's built in Registering 
-        to create new users
-    **********************************************/
-
+    // LARAVELS BUILT IN SYSTEM TO REGISTER NEW USERS
     public function create() {
         return view('auth/register');
     }
 
-    /**********************************************
-        Posts the created user to the database 
-        and encrypts their code with Laravel's 
-        built in system
-    **********************************************/
+    // LARAVELS BUILT IN SYSTEM TO LOGIN USERS
+    public function login() {
+        return view('auth/login');
+    }
 
+    // LARAVELS BUILT IN SYSTEM TO LOGOUT USERS
+    public function logout() {
+        Auth::logout();
+        return redirect('auth/login');
+    }
+
+    // LARAVELS BUILT IN SYSTEM TO POST CREATED USER AND ENCRYPTS THE CODE
     public function postCreate() {
         return redirect('home');    
     }
 
-    /**********************************************
-        Allows for editing of Users
-    **********************************************/
+    // USER PROFILE PAGE
+    public function view() {
+        if (!Auth::check()) {
+            return redirect('auth/login');
+        } 
+        $user = Auth::user();
+        return view('/user', ['user' => $user]);
+        
+    }
 
+    // THIS WOULD ALLOW USERS TO EDIT PROFILES
     public function edit($user_id) {
         $user = new User($user_id);
         return view('edit_user');
     }
 
-    /**********************************************
-        Saves the edits to the database. 
-        CANNOT yet edit passwords.
-    **********************************************/
-
+    // THIS WOULD SAVE USER EDITS TO THE DATABASE MINUS PASSWORDS
     public function postEdit($user_id) {
         $user = new User($user_id);
         $user->first_name = Request::input('first_name');
@@ -48,38 +53,6 @@ class UserController extends Controller {
         $user->password = Request::input('password');
         $user->save();
         return redirect('user');
-    }
-
-    /**********************************************
-        Uses Laravel's built in login 
-        functionality to get Users logged in
-    **********************************************/
-
-    public function login() {
-        return view('auth/login');
-    }
-
-    /**********************************************
-        Logs users out of our application with
-        Laravel's built in system
-    **********************************************/
-
-    public function logout() {
-        Auth::logout();
-        return redirect('auth/login');
-    }
-
-    /**********************************************
-        Shows the User Profile page
-    **********************************************/
-
-    public function view() {
-        if (!Auth::check()) {
-            return redirect('auth/login');
-        } 
-        $user = Auth::user();
-        return view('/user', ['user' => $user]);
-        
     }
 
 }

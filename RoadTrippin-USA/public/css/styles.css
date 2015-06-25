@@ -22,15 +22,25 @@ body {
 	background-size: cover;
 }
 
-/****************************************************************
-LOGIN PAGE
-*****************************************************************/
-.login-background > div {
+.login-background > div,
+.home-background > div,
+.route-background > div,
+.view-background > div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 160px 0 80px;
 }
+
+/****************************************************************
+LOGIN PAGE
+*****************************************************************/
+/*.login-background > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 160px 0 80px;
+}*/
 
 /**********
 / Login Feature Section
@@ -130,12 +140,12 @@ SIGNUP / REGISTER PAGE
 /****************************************************************
 HOME PAGE
 *****************************************************************/
-.home-background > div {
+/*.home-background > div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 160px 0 80px;
-}
+}*/
 
 .home-container {
 	width: 375px;
@@ -160,18 +170,19 @@ HOME PAGE
 	display: block;
 	height: 300px;
 	width: 375px;
+	box-shadow: 1px 1px 12px 3px #222;
 }
 
 
 /****************************************************************
 ROUTE PAGE
 *****************************************************************/
-.route-background > div {
+/*.route-background > div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 160px 0 80px;
-}
+}*/
 
 #map {
       height:400px;
@@ -194,16 +205,25 @@ ROUTE PAGE
 	width: 100px;
 }
 
+.create-trip-button {
+	background-color: rgba(221, 221, 221, .5);
+	width: 115px;
+	border-radius: 30px;
+	padding: 15px;
+	margin: 10px 0;
+	text-align: center;
+}
+
 
 /****************************************************************
 ALL TRIPS PAGE 
 *****************************************************************/
-.view-background > div {
+/*.view-background > div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 160px 0 80px;
-}
+}*/
 
 .view-container {
 	overflow: hidden;
@@ -246,12 +266,12 @@ ALL TRIPS PAGE
 /****************************************************************
 VIEW TRIP PAGE (Image Gallery)
 *****************************************************************/
-.view-background > div {
+/*.view-background > div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 160px 0 80px;
-}
+}*/
 
 .wrapper {
 	display: flex;
@@ -354,18 +374,6 @@ VIEW TRIP PAGE (Image Gallery)
 	margin: 10px 0;
 	text-align: center;
 }
-
-
-/*.lightbox-login-button {
-	background-color: rgba(20, 20, 20, .5);
-	color: #E4E4E4;
-	text-decoration: none;
-	width: 115px;
-	display: inline-block;
-	margin: 10px 0 10px;
-	padding: 10px;
-	border-radius: 30px;
-}*/
 
 
 /****************************************************************
@@ -477,13 +485,11 @@ header > div {
 }
 
 .login-nav-signup {
-	/*color: #222;*/
 	padding: 10px;
 	position: absolute;
 	top: 25px;
 	right: -75px;
 	font-family: Syncopate;
-	/*left: 0;*/
 }
 
 .login-nav-signup a {
@@ -531,7 +537,6 @@ FOOTER SECTION
 *****************************************************************/
 footer {
 	background-color: rgba(220, 220, 220, .9);
-	/*position: relative;*/
 }
 
 footer > div {
@@ -539,7 +544,6 @@ footer > div {
 	width: 960px;
 	margin: auto;
 	position: relative;
-	/*text-align: right;*/
 }
 
 .social-media {

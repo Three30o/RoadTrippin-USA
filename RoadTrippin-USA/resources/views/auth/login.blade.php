@@ -4,7 +4,7 @@
     <div class="login-background">
         <div>
             <div class="login-feature">
-                <span class="title title-login">Journey Across the USA</span>
+                <span class="title title-login">Chronicle Your Journeys</span>
                 <h1 class="login-background-logo">RoadTrippin'</h1>
                 <div class="lightbox lightbox-login">
                     
@@ -18,7 +18,8 @@
                         </ul>
                     </div>
                     @endif
-
+                    
+                    {{-- FORM TO LOGIN IN EXISTING USERS --}}
                     <form role="form" method="POST" action="{{ url('/auth/login') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

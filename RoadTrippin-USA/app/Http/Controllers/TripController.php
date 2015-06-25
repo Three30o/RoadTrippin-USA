@@ -26,30 +26,4 @@ class TripController extends Controller {
 		return view('view_trip', ['images' => $images, 'trip_id' => $trip_id]);
 	}
 
-	public function postCreateTrip() {
-		// $trip = new Trip();
-		// $trip->name = Request::input('name');
-		// $trip->date = Request::input('date');
-		// $trip->origin_city = Request::input('origin_city');
-		// $trip->origin_state = Request::input('origin_state');
-		// $trip->destination_state = Request::input('destination_city');
-		// $trip->destination_state = Request::input('destination_state');
-	}
-
-	public function show($id) {
-		//
-	}
-
-	public function edit($id) {
-		//
-	}
-
-	public function update($id) {
-		//
-	}
-
-	public function delete($id) {
-		//
-	}
-
 }
