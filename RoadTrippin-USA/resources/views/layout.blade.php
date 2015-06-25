@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>RoadTrippin' USA</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Syncopate:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Syncopate:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -35,7 +35,9 @@
 		        @endif
 
 		        @if (!Auth::check())
-		        <div><a class="login-nav-signup" href="/auth/register">Sign Up</a></div>
+		        <div class="login-nav-signup">
+		        	<div><a href="/auth/register">Sign Up</a></div>
+		        </div>
 		        @else
 		        <div class="user-profile">
 

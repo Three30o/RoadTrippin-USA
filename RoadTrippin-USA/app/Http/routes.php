@@ -51,9 +51,3 @@ Route::get('all_trips', 'TripController@viewTrips');
 Route::post('all_trips', 'TripController@viewTrips');
 Route::get('route', 'TripController@createTrip');
 Route::get('trip/{trip_id}/gallery', 'TripController@viewGallery');
-
-// Route::post('route', 'TripController@postCreateTrip');
-
-// Route::get('view', 'TripController@');
-
-

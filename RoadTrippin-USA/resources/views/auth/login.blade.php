@@ -1,7 +1,6 @@
 @extends("layout")
 
 @section("content")
-
     <div class="login-background">
         <div>
             <div class="login-feature">
@@ -59,5 +58,4 @@
             </div>  
         </div>
     </div>
-
 @endsection
