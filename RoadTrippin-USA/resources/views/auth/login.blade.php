@@ -4,7 +4,7 @@
     <div class="login-background">
         <div>
             <div class="login-feature">
-                <span class="title title-login">Chronicle Your Journeys</span>
+                <span class="title title-login">A New Way to Chronicle Life's Adventures</span>
                 <h1 class="login-background-logo">RoadTrippin'</h1>
                 <div class="lightbox lightbox-login">
                     

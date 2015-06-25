@@ -35,13 +35,6 @@ body {
 /****************************************************************
 LOGIN PAGE
 *****************************************************************/
-/*.login-background > div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 160px 0 80px;
-}*/
-
 /**********
 / Login Feature Section
 **********/
@@ -140,13 +133,6 @@ SIGNUP / REGISTER PAGE
 /****************************************************************
 HOME PAGE
 *****************************************************************/
-/*.home-background > div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 160px 0 80px;
-}*/
-
 .home-container {
 	width: 375px;
 	margin: 50px;
@@ -177,13 +163,6 @@ HOME PAGE
 /****************************************************************
 ROUTE PAGE
 *****************************************************************/
-/*.route-background > div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 160px 0 80px;
-}*/
-
 #map {
       height:400px;
 	  width: 960px;
@@ -218,13 +197,6 @@ ROUTE PAGE
 /****************************************************************
 ALL TRIPS PAGE 
 *****************************************************************/
-/*.view-background > div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 160px 0 80px;
-}*/
-
 .view-container {
 	overflow: hidden;
 	display: inline-block;
@@ -266,13 +238,6 @@ ALL TRIPS PAGE
 /****************************************************************
 VIEW TRIP PAGE (Image Gallery)
 *****************************************************************/
-/*.view-background > div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 160px 0 80px;
-}*/
-
 .wrapper {
 	display: flex;
 	justify-content: center;
@@ -484,6 +449,9 @@ header > div {
 	right: 40%;
 }
 
+/**********
+/ User is Not Logged In
+**********/
 .login-nav-signup {
 	padding: 10px;
 	position: absolute;
@@ -497,6 +465,9 @@ header > div {
 	color: #222;
 }
 
+/**********
+/ User is Logged In
+**********/
 .user-profile {
 	background-color: rgba(221, 221, 221);
 	position: absolute;
